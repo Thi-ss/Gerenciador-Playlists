@@ -44,6 +44,8 @@ case "1":
         console.log(`${pesquisarMusica} não encontrada!`);
     }
 
+    break;
+
 case "2":
     console.log(`Selecione as músicas que deseja ver da playlist (sequência númerica das músicas: 0, 1, 2...): ${playlist.join(`, `)}`);
     console.log(`Para selecionar uma fatia das músicas, digite a posição da música, e quantas apartir dela deseja reunir.`);
@@ -51,6 +53,8 @@ case "2":
     let quantiaSlice = prompt((`Digite quantia: `));
     let recortePlaylist = playlist.slice(posicaoSlice, quantiaSlice);
     console.log(`${recortePlaylist}`);
+
+    break;
 
 case "3":
     let remover = prompt((`Selecione uma música que deseja remover.`))
@@ -63,6 +67,42 @@ case "3":
         console.log(`Essa música não pertence à playlist.`);
     }
 
+    break;
+
 case "4":
-    
+    let novaMusica = prompt((`Escolha uma nova música para a playlist.`));
+    playlist.splice(0, 0, novaMusica);
+
+    break;
+
+case "5":
+    console.log(`Ordenando a playlist por ordem alfabética...`);
+    playlist.sort();
+    playlist.join(", ");
+    console.log(playlist);
+
+    break;
+
+case "6":
+    console.log(`Invertendo a ordem da playlist...`);
+    playlist.reverse();
+    playlist.join(", ");
+    console.log(playlist);
+
+    break;
+
+case "7":
+    console.log(`${playlist.join(" | ")}`);
+
+    break;
+
+case "8":
+    console.log(`
+        ======Saindo da Playlist======
+    `);
+
+    break;
+
+default:
+    console.log(`Opção inválida`);
 }
