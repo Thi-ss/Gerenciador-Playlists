@@ -63,6 +63,7 @@ case "3":
         let indice = playlist.indexOf(remover);
         playlist.splice(indice, 1);
         console.log(`Música: ${remover} removida.`);
+        console.log(playlist);
     } else {
         console.log(`Essa música não pertence à playlist.`);
     }
@@ -70,9 +71,9 @@ case "3":
     break;
 
 case "4":
-    let novaMusica = prompt((`Escolha uma nova música para a playlist.`));
-    playlist.splice(0, 0, novaMusica);
-
+    let novaMusica = prompt(`Escolha uma nova música para a playlist.`);
+    playlist.splice(8, 0, novaMusica);
+    console.log(playlist);
     break;
 
 case "5":
@@ -92,7 +93,7 @@ case "6":
     break;
 
 case "7":
-    console.log(`${playlist.join(" | ")}`);
+    console.log(playlist.join(" | "));
 
     break;
 
