@@ -41,7 +41,7 @@ case "1":
         console.log(`${pesquisarMusica} encontrada!, posição: ${playlist.indexOf(pesquisarMusica)}`);
     } else {
         console.log(`${pesquisarMusica} não foi encontrada. Posição não encontrada: ${playlist.indexOf(pesquisarMusica)}`);
-        console.log(`${pesquisarMusica} não encontrada!`);
+        console.log(`${pesquisarMusica} posição não encontrada!`);
     }
 
     break;
